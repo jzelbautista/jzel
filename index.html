@@ -583,13 +583,13 @@
       const data = new FormData(event.currentTarget);
       const recipient = 'jzelsia@gmail.com'; // Add your email address between the quotes to receive messages.
       const subject = encodeURIComponent('Portfolio message from ' + data.get('name'));
-      const body = encodeURIComponent('From: ' + data.get('name') + '\nEmail: ' + data.get('email') + '\n\n' + data.get('message'));
-      if(!recipient){
-        alert('To activate this contact form, add your email address in the recipient variable in index.html.');
-        return;
-      }
-      window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
-    });
+      const body = encodeURIComponent(
+`From: ${data.get('name')}
+Email: ${data.get('email')}
+
+Message:
+${data.get('message')}`
+);
 </script>
 </body>
 </html>
