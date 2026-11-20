@@ -590,27 +590,6 @@
       }
       window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
     });
-  </script>
-<script>
-document.getElementById("contactForm").addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    const name = this.elements["name"].value;
-    const email = this.elements["email"].value;
-    const message = this.elements["message"].value;
-
-    const subject = "Portfolio Contact Message";
-
-    const body =
-        "From: " + name + "%0D%0A" +
-        "Email: " + email + "%0D%0A%0D%0A" +
-        "Message:%0D%0A" + message;
-
-    window.location.href =
-        "mailto:jzelsia@gmail.com?subject=" +
-        encodeURIComponent(subject) +
-        "&body=" + body;
-});
 </script>
 </body>
 </html>
