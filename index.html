@@ -591,7 +591,7 @@
       window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
     });
   </script>
-   <script>
+<script>
 document.getElementById("contactForm").addEventListener("submit", function(e) {
     e.preventDefault();
 
@@ -599,15 +599,18 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
     const email = this.elements["email"].value;
     const message = this.elements["message"].value;
 
-    const subject = encodeURIComponent("Portfolio Contact Message");
+    const subject = "Portfolio Contact Message";
 
-    const body = encodeURIComponent(
-        `From: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
-    );
+    const body =
+        "From: " + name + "%0D%0A" +
+        "Email: " + email + "%0D%0A%0D%0A" +
+        "Message:%0D%0A" + message;
 
     window.location.href =
-        `mailto:jzelsia@gmail.com?subject=${subject}&body=${body}`;
+        "mailto:jzelsia@gmail.com?subject=" +
+        encodeURIComponent(subject) +
+        "&body=" + body;
 });
-</script> 
+</script>
 </body>
 </html>
