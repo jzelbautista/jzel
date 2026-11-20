@@ -559,7 +559,7 @@
     document.getElementById('contactForm').addEventListener('submit', event => {
       event.preventDefault();
       const data = new FormData(event.currentTarget);
-      const recipient = ''; // Add your email address between the quotes to receive messages.
+      const recipient = 'jzelsia@gmail.com'; // Add your email address between the quotes to receive messages.
       const subject = encodeURIComponent('Portfolio message from ' + data.get('name'));
       const body = encodeURIComponent('From: ' + data.get('name') + '\\nEmail: ' + data.get('email') + '\\n\\n' + data.get('message'));
       if(!recipient){
