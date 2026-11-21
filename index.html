@@ -590,6 +590,10 @@ Email: ${data.get('email')}
 Message:
 ${data.get('message')}`
 );
+
+const mailto = `mailto:${recipient}?subject=${subject}&body=${body}`;
+window.location.href = mailto;
+});
 </script>
 </body>
 </html>
